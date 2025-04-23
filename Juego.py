@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-
-import sys
+﻿import sys
 import random
 
 opciones = ["piedra", "papel", "tijera"]
@@ -25,7 +23,7 @@ if len(sys.argv) != 4:
 humano = [op.lower() for op in sys.argv[1:]]
 for op in humano:
     if op not in opciones:
-        print(f"Opci�n inv�lida: {op}. Usa solo piedra, papel o tijera.")
+        print(f"Opcion invalida: {op}. Usa solo piedra, papel o tijera.")
         sys.exit(1)
 
 programa = [random.choice(opciones) for _ in range(3)]
@@ -35,18 +33,23 @@ print("El programa elige:", " ".join(programa))
 puntos_humano = 0
 puntos_programa = 0
 
+# Comparar cada jugada
 for i in range(3):
     resultado = comparar_jugada(humano[i], programa[i])
-    
     if resultado == 1:
         puntos_humano += 1
     elif resultado == -1:
         puntos_programa += 1
 
-print(f"Punteo: {puntos_humano} � {puntos_programa}")
+# Mostrar resultados
+print(f"Puntos Humano: {puntos_humano}")
+print(f"Puntos Programa: {puntos_programa}")
+
+# Determinar ganador
 if puntos_humano > puntos_programa:
-    print("Ganador: Humano")
-elif puntos_programa > puntos_humano:
-    print("Ganador: Programa")
+    print("¡Ganaste! 🎉")
+elif puntos_humano < puntos_programa:
+    print("Perdiste. 😢")
 else:
-    print("Resultado: Empate")
+    print("¡Empate! 🤝")
+
