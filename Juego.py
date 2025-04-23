@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import sys
 import random
@@ -17,8 +18,8 @@ def comparar_jugada(j1, j2):
         return -1
 
 if len(sys.argv) != 4:
-    print("Uso: python juego.py <opción1> <opción2> <opción3>")
-    print("Las opciones deben ser: piedra, papel o tijera")
+    print("Debe ingresar las dos palabras siguientes seguido la eleccion: python juego.py <eleccion1> <eleccion2> <elecion3>")
+    print("Las opciones a elegir son: piedra, papel o tijera")
     sys.exit(1)
 
 humano = [op.lower() for op in sys.argv[1:]]
