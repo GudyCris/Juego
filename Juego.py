@@ -16,17 +16,18 @@ def comparar_jugada(j1, j2):
         return -1
 
 if len(sys.argv) != 4:
-    print("Debe ingresar las dos palabras siguientes seguido la eleccion: python juego.py <eleccion1> <eleccion2> <elecion3>")
+    print("Debe ingresar las dos palabras siguientes seguido de sus 3 elecciones: python juego.py <eleccion1> <eleccion2> <elecion3>")
     print("Las opciones a elegir son: piedra, papel o tijera")
     sys.exit(1)
 
 humano = [op.lower() for op in sys.argv[1:]]
 for op in humano:
     if op not in opciones:
-        print(f"Opcion invalida: {op}. Usa solo piedra, papel o tijera.")
+        print(f"Opcion invalida: {op}. Las unicas opciones validas son piedra, papel o tijera.")
         sys.exit(1)
 
 programa = [random.choice(opciones) for _ in range(3)]
+
 
 print("El programa elige:", " ".join(programa))
 
@@ -47,9 +48,9 @@ print(f"Puntos Programa: {puntos_programa}")
 
 # Determinar ganador
 if puntos_humano > puntos_programa:
-    print("¡Ganaste! 🎉")
+    print("¡El usuario Gano! ")
 elif puntos_humano < puntos_programa:
-    print("Perdiste. 😢")
+    print("Perdiste. Gano el programa")
 else:
-    print("¡Empate! 🤝")
+    print("¡Empate!")
 
