@@ -33,7 +33,7 @@ print("El programa elige:", " ".join(programa))
 
 puntos_humano = 0
 puntos_programa = 0
-
+#prueba para ver si guarda los cambios en git
 # Comparar cada jugada
 for i in range(3):
     resultado = comparar_jugada(humano[i], programa[i])
