@@ -1,5 +1,5 @@
 import unittest
-from juego import comparar_jugada  # Asegúrate de importar correctamente la función
+from logica import comparar_jugada  
 
 class TestJuego(unittest.TestCase):
     
@@ -31,7 +31,7 @@ class TestJuego(unittest.TestCase):
         self.assertEqual(comparar_jugada("papel", "papel"), 0)
     
     def test_piedra_vs_tijera_2(self):
-        # Puedes agregar pruebas repetidas si quieres, por ejemplo:
+       
         self.assertEqual(comparar_jugada("piedra", "tijera"), 1)
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
-# test_logica.py
+# para hacer las pruebas
 import unittest
 from logica import comparar_jugada
 

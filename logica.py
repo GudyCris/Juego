@@ -1,4 +1,4 @@
-# logica.py
+# para saber quien gana
 
 def comparar_jugada(j1, j2):
     if j1 == j2:
