@@ -1,4 +1,3 @@
-# para hacer las pruebas
 import unittest
 from logica import comparar_jugada
 
@@ -11,13 +10,13 @@ class TestCompararJugada(unittest.TestCase):
         self.assertEqual(comparar_jugada("piedra", "papel"), -1)
 
     def test_piedra_vs_piedra(self):
-        self.assertEqual(comparar_jugada("piedra", "piedra"), 0)
+        self.assertEqual(comparar_jugada("zapato", "piedra"), 0)
 
     def test_papel_vs_piedra(self):
         self.assertEqual(comparar_jugada("papel", "piedra"), 1)
 
     def test_papel_vs_tijera(self):
-        self.assertEqual(comparar_jugada("papel", "tijera"), -1)
+        self.assertEqual(comparar_jugada("zapato", "tijera"), -1)
 
     def test_papel_vs_papel(self):
         self.assertEqual(comparar_jugada("papel", "papel"), 0)
